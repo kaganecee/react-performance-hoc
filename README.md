@@ -7,14 +7,14 @@ React high order component check how much does it take to render component
 ## Installation
 
 ```
-npm install react-render-time-hoc
+npm install react-performance-hoc
 ```
 
 ## Usage
 
 ```js
 import React from "react"
-import withPerformance from "react-render-time-hoc"
+import withPerformance from "react-performance-hoc"
 
 const Component = () => {
   const PerformantComponent = withPerformance(Component)
