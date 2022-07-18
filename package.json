@@ -1,0 +1,31 @@
+{
+  "name": "react-render-time-hoc",
+  "version": "1.0.0",
+  "description": "React high order component check how much does it take to render component",
+  "main": "withPerformance.js",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaganecee/react-render-time-hoc.git"
+  },
+  "keywords": [
+    "react",
+    "render-time",
+    "measure-time",
+    "component",
+    "high-order-component",
+    "render"
+  ],
+  "author": "Bilge Kağan Ece",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaganecee/react-render-time-hoc/issues"
+  },
+  "homepage": "https://github.com/kaganecee/react-render-time-hoc#readme"
+  
+}

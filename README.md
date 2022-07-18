@@ -1,4 +1,4 @@
-# React Render Time High Order Component
+# Measure React Render Time with High Order Component
 
 React high order component check how much does it take to render component
 
