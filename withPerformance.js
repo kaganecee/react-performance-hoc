@@ -1,15 +1,16 @@
 import { useEffect } from "react";
-const withPerformance = (Component) => ({...props}) => {
+import React from "react"
+const withPerformance = (Component,errorTime=200,warnTime=100) => ({...props}) => {
     let startTime;
     let endTime;
     startTime = performance.now();
     useEffect(()=> {
         <Component/>
         endTime = performance.now();
-        if(endTime-startTime > 200){
+        if(endTime-startTime > errorTime){
             console.error(Component.name,"render time =",endTime - startTime)
         }
-        else if(endTime-startTime > 100){
+        else if(endTime-startTime > warnTime){
             console.warn(Component.name,"render time =",endTime-startTime)
         }else{
             console.log(Component.name,"render time =",endTime - startTime)

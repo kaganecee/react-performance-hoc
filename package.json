@@ -1,25 +1,67 @@
 {
   "name": "react-performance-hoc",
-  "version": "0.1.0",
-  "description": "React high order component check how much does it take to render component",
-  "main": "src/withPerformance.js",
-  "dependencies": {
-    "react": "^18.2.0"
+  "version": "1.1.1",
+  "peerDependencies": {
+    "babel": "^6.23.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "rollup -c",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "React high order component check how much does it take to render component",
+  "main": "build/withPerformance.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "rollup": "^2.77.0",
+    "rollup-plugin-dts": "^4.2.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kaganecee/react-performance-hoc.git"
   },
   "keywords": [
+    "measure",
     "react",
-    "render-time",
-    "measure-time",
-    "component",
-    "high-order-component",
-    "render"
+    "render",
+    "time",
+    "with",
+    "high",
+    "order",
+    "component"
   ],
   "author": "Bilge Kağan Ece",
   "license": "ISC",
@@ -27,5 +69,4 @@
     "url": "https://github.com/kaganecee/react-performance-hoc/issues"
   },
   "homepage": "https://github.com/kaganecee/react-performance-hoc#readme"
-  
 }
