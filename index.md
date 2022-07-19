@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+## React Performance High Order Component
 
-You can use the [editor on GitHub](https://github.com/kaganecee/react-performance-hoc/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+React high order component check how much does it take to render component
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Installation
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+npm install react-performance-hoc
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Usage
 
-### Jekyll Themes
+```js
+import React from "react"
+import withPerformance from "react-performance-hoc"
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kaganecee/react-performance-hoc/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+const Component = () => {
+  const PerformantComponent = withPerformance(Component)
+  return (
+    <div>
+      <PerformantComponent/>
+    </div>
+  )
+}
+```
 
-### Support or Contact
+### Props
+```js
+import React from "react"
+import withPerformance from "react-performance-hoc"
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+const Component = () => {
+  const PerformantComponent = 
+  withPerformance(
+    Component,
+    1000,  //If render time is more than this time, log with console.error .  Default=200
+    100    //If render time is more than this time, log with console.warn .  Default=100
+    )
+  return (
+    <div>
+      <PerformantComponent/>
+    </div>
+  )
+}
+```
